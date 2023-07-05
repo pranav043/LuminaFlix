@@ -18,7 +18,7 @@ const SearchResult = () => {
 
     const fetchInitialData = () => {
         setLoading(true);
-        tmdbApi(`/search/multi?query=${query}&page=${pageNum}`, '').then(
+        tmdbApi(`/search/multi?query=${query}&page=${1}`, '').then(
             (res) => {
                 setData(res);
                 setPageNum((prev) => prev + 1);
@@ -83,7 +83,12 @@ const SearchResult = () => {
                         </>
                     ) : (
                         <span className="resultNotFound">
-                            Sorry, Results not found!
+                            <span>Sorry, No results found!</span>
+                            <img
+                                src={noResults}
+                                alt="No results found"
+                                className="noResultsImage"
+                            />
                         </span>
                     )}
                 </ContentWrapper>
