@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { HiOutlineSearch } from "react-icons/hi";
 import { SlMenu } from "react-icons/sl";
 import { VscChromeClose } from "react-icons/vsc";
@@ -17,6 +17,7 @@ const Header = () => {
     const [showSearch, setShowSearch]: any = useState("");
     const navigate = useNavigate();
     const location = useLocation();
+    const searchInputRef = useRef<HTMLInputElement>(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -54,6 +55,9 @@ const Header = () => {
     const openSearch = () => {
         setMobileMenu(false);
         setShowSearch(true);
+        setTimeout(() => {
+            searchInputRef.current?.focus(); // Auto-focus the input field after a small delay
+        }, 100);
     };
 
     const openMobileMenu = () => {
@@ -108,6 +112,7 @@ const Header = () => {
                     <ContentWrapper>
                         <div className="searchInput">
                             <input
+                                ref={searchInputRef}
                                 type="text"
                                 placeholder="Search for a movie or tv show...."
                                 onChange={(e) => setQuery(e.target.value)}

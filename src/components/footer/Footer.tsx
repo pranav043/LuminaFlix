@@ -1,9 +1,9 @@
 import React from "react";
 import {
-    FaFacebookF,
-    FaInstagram,
-    FaTwitter,
     FaLinkedin,
+    FaChrome,
+    FaGithub,
+    FaYoutube
 } from "react-icons/fa";
 
 import ContentWrapper from "../contentWrapper/ContentWrapper";
@@ -14,34 +14,23 @@ const Footer = () => {
     return (
         <footer className="footer">
             <ContentWrapper>
-                <ul className="menuItems">
-                    <li className="menuItem">Terms Of Use</li>
-                    <li className="menuItem">Privacy-Policy</li>
-                    <li className="menuItem">About</li>
-                    <li className="menuItem">Blog</li>
-                    <li className="menuItem">FAQ</li>
-                </ul>
                 <div className="infoText">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur.
+                    Welcome to LuminaFlix, your go-to platform for movies, shows, anime, and more. Explore our vast collection, check ratings, cast, and plot details, and stay updated with trending content around you. Enjoy a seamless entertainment experience and discover your next favorite watch.
                 </div>
+                <div className="infoText">Developed with ❤️ by Pranav Gupta</div>
                 <div className="socialIcons">
-                    <span className="icon">
-                        <FaFacebookF />
-                    </span>
-                    <span className="icon">
-                        <FaInstagram />
-                    </span>
-                    <span className="icon">
-                        <FaTwitter />
-                    </span>
-                    <span className="icon">
+                    <a href="https://pranavgupta.vercel.app/" target="_blank" rel="noopener noreferrer" className="icon">
+                        <FaChrome />
+                    </a>
+                    <a href="https://www.linkedin.com/in/pranavgupta99/" target="_blank" rel="noopener noreferrer" className="icon">
                         <FaLinkedin />
-                    </span>
+                    </a>
+                    <a href="https://github.com/pranav043" target="_blank" rel="noopener noreferrer" className="icon">
+                        <FaGithub />
+                    </a>
+                    <a href="https://stream-vibes.vercel.app/" target="_blank" rel="noopener noreferrer" className="icon">
+                        <FaYoutube />
+                    </a>
                 </div>
             </ContentWrapper>
         </footer>
